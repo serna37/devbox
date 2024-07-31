@@ -4,6 +4,7 @@
 
 # devbox
 This repository is `devbox`.
+![devbox-demo](./devbox-demo.gif)
 
 <!-- icon generator -->
 <a href="https://serna37.github.io/icon-badge/">
