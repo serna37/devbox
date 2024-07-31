@@ -1,16 +1,12 @@
-> [!Caution]
-> This `README.md` is created for sample repository, should modify for new one.
-> Please substitute :%s/template/collect_name/g
+[![tag](https://img.shields.io/badge/tag-v0.0.1-green)](https://github.com/serna37/devbox/releases/tag/v0.0.1)
 
-[![tag](https://img.shields.io/badge/tag-v0.0.1-green)](https://github.com/serna37/template/releases/tag/v0.0.1)
+[![build](https://github.com/serna37/devbox/actions/workflows/build.yml/badge.svg?branch=develop)](https://github.com/serna37/devbox/actions/workflows/build.yml)
+[![deploy](https://github.com/serna37/devbox/actions/workflows/deploy.yml/badge.svg?branch=release)](https://github.com/serna37/devbox/actions/workflows/deploy.yml)
+[![cron](https://github.com/serna37/devbox/actions/workflows/cron.yml/badge.svg?branch=release)](https://github.com/serna37/devbox/actions/workflows/cron.yml)
+[![tag_release](https://github.com/serna37/devbox/actions/workflows/tag_release.yml/badge.svg?branch=master)](https://github.com/serna37/devbox/actions/workflows/tag_release.yml)
 
-[![build](https://github.com/serna37/template/actions/workflows/build.yml/badge.svg?branch=develop)](https://github.com/serna37/template/actions/workflows/build.yml)
-[![deploy](https://github.com/serna37/template/actions/workflows/deploy.yml/badge.svg?branch=release)](https://github.com/serna37/template/actions/workflows/deploy.yml)
-[![cron](https://github.com/serna37/template/actions/workflows/cron.yml/badge.svg?branch=release)](https://github.com/serna37/template/actions/workflows/cron.yml)
-[![tag_release](https://github.com/serna37/template/actions/workflows/tag_release.yml/badge.svg?branch=master)](https://github.com/serna37/template/actions/workflows/tag_release.yml)
-
-# template
-This repository is `template`.
+# devbox
+This repository is `devbox`.
 
 <!-- icon generator -->
 <a href="https://serna37.github.io/icon-badge/">
@@ -23,8 +19,6 @@ This repository is `template`.
   <tr>
     <td>License</td>
     <td>Env</td>
-    <td>Lang</td>
-    <td>DB</td>
     <td>Editor</td>
   </tr>
   <tr>
@@ -36,52 +30,16 @@ This repository is `template`.
     </td>
     <!-- Env -->
     <td>
-      <img src="https://img.shields.io/badge/-Google-333.svg?logo=google&style=flat">
       <img src="https://img.shields.io/badge/-Docker-EEE.svg?logo=docker&style=flat">
-      <img src="https://img.shields.io/badge/-k8s-EEE.svg?logo=kubernetes&style=flat">
-      <br>
       <img src="https://img.shields.io/badge/-shell-555.svg?logo=shell&style=flat">
-      <img src="https://img.shields.io/badge/-zsh-555.svg?logo=&style=flat">
-    </td>
-    <!-- Lang -->
-    <td>
-      <img src="https://img.shields.io/badge/-HTML5-333.svg?logo=html5&style=flat">
-      <img src="https://img.shields.io/badge/-CSS3-1572B6.svg?logo=css3&style=flat">
       <br>
-      <img src="https://img.shields.io/badge/-GAS-333.svg?logo=googleappsscript&style=flat">
-      <img src="https://img.shields.io/badge/-JavaScript-276DC3.svg?logo=javascript&style=flat">
-      <img src="https://img.shields.io/badge/-Node.js-555.svg?logo=nodedotjs&style=flat">
-      <img src="https://img.shields.io/badge/-TypeScript-555.svg?logo=typescript&style=flat">
-      <img src="https://img.shields.io/badge/-React-555.svg?logo=react&style=flat">
-      <br>
-      <img src="https://img.shields.io/badge/-Python-F9DC3E.svg?logo=python&style=flat">
-      <img src="https://img.shields.io/badge/-Flask-000000.svg?logo=flask&style=flat">
-      <img src="https://img.shields.io/badge/-pandas-%23150458.svg?logo=pandas&style=flat">
-      <img src="https://img.shields.io/badge/-selenium-555.svg?logo=selenium&style=flat">
-      <br>
-      <img src="https://img.shields.io/badge/-Go-555.svg?logo=go&style=flat">
-      <img src="https://img.shields.io/badge/-Gin-555.svg?logo=go&style=flat">
-      <img src="https://img.shields.io/badge/-Gorm-555.svg?logo=go&style=flat">
-      <br>
-      <img src="https://img.shields.io/badge/-Java-F80000.svg?logo=&style=flat">
-      <img src="https://img.shields.io/badge/-Spring-555.svg?logo=spring&style=flat">
-      <img src="https://img.shields.io/badge/-SpringBoot-555.svg?logo=springboot&style=flat">
-      <img src="https://img.shields.io/badge/-MyBatis-000000.svg?logo=&style=flat">
-      <br>
-      <img src="https://img.shields.io/badge/-C-00599C.svg?logo=c&style=flat">
-      <img src="https://img.shields.io/badge/-C++-00599C.svg?logo=cplusplus&style=flat">
-      <img src="https://img.shields.io/badge/-Rust-555.svg?logo=rust&style=flat">
-    </td>
-    <!-- DB -->
-    <td>
-      <img src="https://img.shields.io/badge/sqlite-%2307405e.svg?logo=sqlite&style=flat">
-      <img src="https://img.shields.io/badge/-PostgreSQL-555.svg?logo=postgresql&style=flat">
-      <img src="https://img.shields.io/badge/-MySQL-000000.svg?logo=mysql&style=flat">
+      <img src="http://img.shields.io/badge/-macOS-000000.svg?logo=apple&logoColor=ffffff&style=flat">
+      <img src="http://img.shields.io/badge/-debian-A81D33.svg?logo=debian&logoColor=ffffff&style=flat">
     </td>
     <!-- Editor -->
     <td>
       <a href="https://github.com/serna37/vim">
-        <img src="http://img.shields.io/badge/vim-9.0-36b04a.svg?logo=vim&logoColor=019733&labelColor=c4c4c4&style=flat">
+        <img src="http://img.shields.io/badge/vim-9.1-36b04a.svg?logo=vim&logoColor=019733&labelColor=c4c4c4&style=flat">
       </a>
     </td>
   </tr>
@@ -93,7 +51,36 @@ This repository is `template`.
 
 # OVER VIEW
 
-## File Tree
+## What is devbox?
+devbox can build Dev Container without any hesitate.
+
+## Dependency
+- on macOS
+- OrbStack
+- your dotfiles install.sh
+
+## pre setup
+on your vimrc for inner container, this setting is essential to pipe clipboard.
+```vim
+" This Repository's Dockerfile using debian OS, my host is macOS(Darwin).
+if system('uname -s')->split('\n')[0] =~ 'Linux'
+    aug Yank
+        au!
+        " yankした文字列を共有ファイルに書き込む
+        au TextYankPost * cal system('tee <&0 > /shared-register/clip', @")
+    aug END
+endif
+```
+
+## Flow
+When you execute command `devbox` in devbox.sh, devbox do this flow.
+1. If not running Docker engine, open OrbStack.
+2. Read these files (I recommend you to put these on your dotfiles repozitory).
+  - Dockerfile
+  - docker-compose.yml
+  - devbox_gitignore.txt
+3. If not exist, create directory `.devbox-XXX` and setup files.
+`XXX` is unique number at that time. Here is the sample.
 <!-- file tree -->
 <a href="https://tree.nathanfriend.io/">
   <img src="https://img.shields.io/badge/file-tree-lightgray.svg?logo=files&style=flat">
@@ -101,273 +88,118 @@ This repository is `template`.
 
 ```
 .
-├── core/
-│   ├── forge.js       : 🛠️manage obsidian logic
-│   ├── obsidian.js    : 💎store info
-│   └── vital.js       : 📲important logic
-├── components/
-│   └── *.js           : 📦make component files
-├── remnant/
-│   ├── playground.js  : 📑render logic
-│   └── prototype.js   : 📜on load logic
-└── index.html         : 🔖entry point
+├── .devbox-1234/
+│   ├── shared-register/  : created when start container
+│   │      ├── clip       : vim yank register in container
+│   │      └── tmp        : for watch changeing clip
+│   ├── vol/                : bind mount folder to work something
+│   ├── docker-compose.yml  : from your dotfiles repozitory
+│   └── Dockerfile          : from your dotfiles repozitory
+└── .gitignore         : add contents from devbox_gitignore.txt
 ```
 
-## Sequence
-<!-- mermaid -->
-<a href="https://mermaid.live/">
-  <img src="http://img.shields.io/badge/Mermaid-live_editor-f52ee5.svg?logo=Mermaid&logoColor=&labelColor=696969&style=flat">
-</a>
-
-```mermaid
-sequenceDiagram
-    Front->>+This: sample API
-    This-->>+DB: query
-    DB-->>-This: select result
-    This->>-Front: response
-```
-
-## API IF
-|status|method|endpoint|feature|remarks|
-|--|--|--|--|--|
-|<ul><li>[ ] </ul>|`POST`|`/app`|description|remarks|
-|<ul><li>[x] </ul>|`GET`|`/app/test`|description|remarks|
-
-## ER
-<!-- mermaid -->
-<a href="https://mermaid.live/">
-  <img src="http://img.shields.io/badge/Mermaid-live_editor-f52ee5.svg?logo=Mermaid&logoColor=&labelColor=696969&style=flat">
-</a>
-
-```mermaid
-erDiagram
-    %% comment
-    table_1 ||--|| table_2 : one_to_one_identify
-    table_1 }o--|{ table_3 : zero_many_to_one-many_identify
-    table_4
-    table_5 ||..|| table_6 : one_to_one_non-identify
-```
+4. Check checksum `Dockerfile`, `docker-compose.yml` by md5 and replace from dotfiles repozitory when it has any diff.
+5. Build image. arg `devbox re` will build without cache.
+6. Construct `shared-register` and pipe `vim yank in container` and `host clipboard` on async process.
+7. Start and login container with `zsh`.
+8. When you logout from container, destruct `shared-register`.
 
 ---
 
 # Usage
-## 基本運用
-- どうたらする
-- どうたらする
+1. Inclue or copy `devbox.sh` in your `.zshrc` and `exec $SHELL -l` to reload.
+2. Copy tree files on `~/git/dotfiles/conf/devbox`
+- Dockerfile
+- docker-compose.yml
+- devbox_gitignore.txt
+3. Do `devbox` on any directory.
 
-## メンテ作業
-- `test.py`へ関数追加
-- ブランチ`release`へPR、マージ
+---
+
+# 日本語ドキュメント
+私は日本人なので、こちらの方が饒舌です。
+
+## devbox
+devbox コマンドを用いると、どこでも簡単にコンテナを作成してログインし
+気軽に作業して壊せるようになります。
+やっていることはただコンテナを起動しているだけですが、いくつか工夫が必要なため
+レポジトリにまとめました。
+VSCodeから来たdev-containerやdev-container-cliの、より汎用版を目指しました。
+
+## 前提の環境
+- M2 MacBookで動作確認済みです
+- OrbStack (Dockerが動けば良いのですが、Docker for Desktopよりこちらのが軽いので)
+- あなたのdotfilesレポジトリと、そのinstall.shを作っておいてください。
+
+なお、正直たいした行数のshellではないので、ご自分の環境に合わせて適宜修正して使うことは難しくありません。
+
+## 事前準備
+vimrcに以下を追記することで、コンテナ内のvimでヤンクした値を
+共有ファイルに書き込むようにしておき、後述の仕組みから
+ホストのクリップボードに値を渡せます。
+```vim
+" このレポジトリではDockerfileにdebianのOSイメージを採用しています。
+" ホストはmacOSなのでDarwinとなり、同じvimrcでもコンテナで動かしてる時のみ提要できます
+if system('uname -s')->split('\n')[0] =~ 'Linux'
+    aug Yank
+        au!
+        " yankした文字列を共有ファイルに書き込む
+        au TextYankPost * cal system('tee <&0 > /shared-register/clip', @")
+    aug END
+endif
+```
+
+## devboxが行う流れ
+devbox.sh内の関数`devbox`を実行すると、以下の流れでコンテナを作成します。
+1. Dockerエンジンが起動していなければOrbStackを起動します。
+2. 以下のファイルを参照します。 (本レポジトリにもありますが、あなたのdotfilesに入れると良いと思います。)
+  - Dockerfile
+  - docker-compose.yml
+  - devbox_gitignore.txt
+3. なければ`.devbox-XXX`というフォルダを作成し、以下のように構成します。
+`XXX`の部分は一意になるような数字です。
+未指定でdocker-composeがつけるコンテナ名が{フォルダ名}-{サービス名}なので一意にしています。
+<!-- file tree -->
+<a href="https://tree.nathanfriend.io/">
+  <img src="https://img.shields.io/badge/file-tree-lightgray.svg?logo=files&style=flat">
+</a>
+
+```
+.
+├── .devbox-1234/
+│   ├── shared-register/  : コンテナ起動直前に作成します。
+│   │      ├── clip       : コンテナ内のvimでヤンクした値を入れ、ホスト側のクリップボードに渡すためのファイル
+│   │      └── tmp        : clipファイルの変更検知のためのもの
+│   ├── vol/                : バインドマウントフォルダ。作業でお好きにお使いいただけます。
+│   ├── docker-compose.yml  : このymlでコンテナを立ち上げます。
+│   └── Dockerfile          : この構成のコンテナにします。
+└── .gitignore         : バインドマウントしているvol以外を無視するよう、既存gitignoreに追記します。
+```
+
+4. `Dockerfile`, `docker-compose.yml`のチェックサムをmd5で確認し、差分があればdotfilesの物で更新します。
+5. イメージをビルドします。差分があればコンテナをレイヤのキャッシュを見てビルドします。
+`devbox re`とreオプションをつけることで、キャッシュを見ずに一からビルドします。
+6. `shared-register`フォルダの部分を構築し、`コンテナ内のvimでのヤンク`と`ホストのclipboard`を
+非同期プロセスで繋ぎます。このプロセスはコンテナを抜けた際に終了されます。
+7. コンテナを起動し、zshでログインします。
+8. コンテナをexitすると、`shared-register`やプロセスを消します。
+
+---
+
+# Usage
+1. `devbox.sh`の内容をあなたの`.zshrc`にsourceするなりコピペするなりして、`exec $SHELL -l`なり`exec /bin/zsh -l`なりで適用します。
+2. 本レポジトリのうち、以下3つを`~/git/dotfiles/conf/devbox`にコピーしてください。
+パスが嫌であれば、devbox関数の中身の変数を変更できます。
+- Dockerfile
+- docker-compose.yml
+- devbox_gitignore.txt
+3. 任意のフォルダでdevbox関数を実行すれば、そこに.devbox-XXXフォルダを構成して実行されていきます。
+
+なお、Dockerとして当然の話ですが
+最初のビルドのみ時間がかかるものの、以降同じDockerfileであれば
+何個めでも何回目でも、キャッシュを利用するため即時立ち上がります。
 
 ---
 
 # Development
 
-## Branch
-> [!Important]
-> ## *Branch Rule*
-> - develop (default): work.
-> - release: deploy server and publish. PR `[release <- develop]`
-> - master: tag-release. PR `[master <- release]`
-
-<!-- mermaid -->
-<a href="https://mermaid.live/">
-  <img src="http://img.shields.io/badge/Mermaid-live_editor-f52ee5.svg?logo=Mermaid&logoColor=&labelColor=696969&style=flat">
-</a>
-
-```mermaid
-%%{init: { 
- 'gitGraph': { 'mainBranchName': 'master' }
-} }%%
-gitGraph
-    commit
-    branch release
-    checkout release
-    branch develop
-    checkout develop
-    commit
-    commit
-    branch feature
-    checkout feature
-    commit
-    commit
-    commit
-    checkout develop
-    merge feature
-    commit id: "Build CI"
-    checkout release
-    merge develop
-    commit id: "Release CD"
-    checkout master
-    merge release
-    commit id: "release tag"
-```
-
-> [!TIP]
-> - GitHub CLIでPR `base`<-`head` (alias設定)
-> ```zsh
-> alias pr_develop_feature='gh pr create --base develop --head $(git branch --contains | cut -d " " -f 2) --title "modify" --body ""'
-> alias pr_release_develop='gh pr create --base release --head develop --title "Publish" --body ""'
-> alias pr_master_release='gh pr create --base master --head release --title "Publish" --body ""'
-> ```
->
-> - PRをブラウザで開く (sample #10)
-> ```shell
-> gh browse 10
-> ```
-
-## Commands
-- Python仮想環境を設定
-```shell
-python -m venv .
-```
-
-- 仮想環境を起動
-```shell
-. bin/activate
-```
-
-- pip install
-```shell
-pip install -r requirements.txt
-```
-
-- 仮想環境を終了
-```shell
-deactivate
-```
-
----
-
-# Build & Deploy
-## Util
-- コンテナ停止 + 削除 (コンテナ名重複を防ぐ)
-```shell
-docker stop $(docker ps -aq -f name=NAME)
-docker rm $(docker ps -aq -f name=NAME)
-```
-
-- 停止コンテナ全削除 + <none>イメージ全削除
-```shell
-docker container prune
-docker rmi $(docker images -f "dangling=true" -q)
-```
-
-## Local
-- ローカルサーバ起動
-```shell
-sh deploy.sh && lazydocker
-```
-
-- コマンド内容
-```shell
-cp ../DB/DB.db ./DB \
-  && docker build -t IMAGENAME:latest . \
-  && docker run \
-    --name NAME \
-    -d \
-    -p 8080:8080 \
-    -v "$(pwd)/../DB:/asset/app/DB" \
-    NAME:latest
-```
-
-## Remote
-- `release`ブランチへのPRマージで、`Github Actions`からデプロイ。
-  - https://github.com/serna37/template/actions
-  - `README.md`のバッチ等で`workflow`の成功を確認 ※ブランチに注意する
-
-> [!Note]
-> - `GitHub Actions`でSSH接続する場合`シークレット`が必要。[^1]
->   - https://github.com/serna37/template/settings/secrets/actions
-
-[^1]:https://qiita.com/0622okakyo/items/5295b7b13daf3c35b3e1
-
-<details>
-
-<summary>シークレット登録コマンド</summary>
-
-```shell
-gh secret set HOST --body 'neras-sta.com'
-gh secret set PORT --body '22'
-gh secret set USERNAME --body 'some value'
-gh secret set PASSWORD --body 'some value'
-gh secret set MAIL_HOST --body 'smtp.gmail.com'
-gh secret set MAIL_PORT --body '465'
-gh secret set MAIL_USERNAME --body 'some value'
-gh secret set MAIL_PASSWORD --body 'some value'
-gh secret set MAIL_FROM --body 'some value'
-gh secret set MAIL_TO --body 'some value'
-```
-
-</details>
-
-<details>
-
-<summary>サーバ側の事前準備</summary>
-
-### サーバ側でクローン後、認証不要に
-`$GITHUB_TOKEN`はGitHubログインのトークン。
-```shell
-git remote set-url origin https://$GITHUB_TOKEN@github.com/serna37/template.git
-```
-
-### ポートのプロセスを確認
-```shell
-lsof -P -i:8080
-kill {PID}
-```
-
-### リバプロ追加
-- `su`して実行
-```shell
-vim /etc/httpd/conf/httpd.conf
-```
-```vim
-syntax on | set number laststatus=2 showtabline=2 incsearch hlsearch ignorecase smartcase shortmess-=S
-```
-
-- 設定追加
-```xml
-<Location /PATH>
-  ProxyPass http://localhost:8080
-  ProxyPassReverse http://localhost:8080
-</Location>
-```
-
-- apache再起動
-```shell
-systemctl restart httpd
-```
-
-</details>
-
----
-
-# Note
-- dockerでsudoしなくていい設定[^2]
-
-[^2]:https://qiita.com/DQNEO/items/da5df074c48b012152ee
-
-```shell
-# dockerグループがなければ作る
-sudo groupadd docker
-
-# 現行ユーザをdockerグループに所属させる
-sudo gpasswd -a $USER docker
-
-# dockerデーモンを再起動する (CentOS7の場合)
-sudo systemctl restart docker
-
-# exitして再ログインすると反映される。
-exit
-```
-
-- dockerデーモンの権限がない場合 (Docker for Desktopで確認)
-```shell
-sudo chown -R $(whoami) ~/.docker
-```
-
-- GitHub ActionsからGmail送信の準備
-  - 2段階認証のため、アプリパスワードを作成する[^3]
-
-[^3]:https://zenn.dev/nakamura196/articles/789122b57d595b
