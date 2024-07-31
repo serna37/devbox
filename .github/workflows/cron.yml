@@ -1,0 +1,86 @@
+name: cron
+
+on:
+#  schedule:
+#    - cron: 0 0 25-30,1-2 */1 *
+# https://crontab.guru/
+  workflow_dispatch:
+
+#permissions:
+#  contents: write
+
+jobs:
+  mng_repo_cli:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: release
+      - name: Re Open issue
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh issue list
+
+  exec_ssh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: release
+      - name: SSH Access
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          port: ${{ secrets.PORT }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          script: |
+            echo something
+
+  send_mail:
+    needs: exec_ssh
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: release
+      - name: Setup Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.8'
+          architecture: 'x64'
+      - name: Display Python version
+        run: |
+          python -V
+      - name: Install Library
+        run: |
+          pip install -r requirements.txt
+      - name: Exec Python Script
+        run: |
+          python sample.py
+          echo debug
+          cat sendmail.html
+          # replace mail-template.html
+      - name: Send mail
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: ${{ secrets.MAIL_HOST }}
+          server_port: ${{ secrets.MAIL_PORT }}
+          username: ${{ secrets.MAIL_USERNAME }}
+          password: ${{ secrets.MAIL_PASSWORD }}
+          subject: SOMETHING Completed - ${{ github.repository }}
+          to: ${{ secrets.MAIL_TO }}
+          from: ${{ secrets.MAIL_FROM }}
+          body: |
+              Hi.
+              The SOMETHING process for the repository ${{ github.repository }} has been successfully completed.
+
+              ----------
+              Commit: ${{ github.sha }}
+              Commit link: https://github.com/${{ github.repository }}/commit/${{ github.sha }}
+              Branch: ${{ github.ref }}
+              ----------
+
+              Best regards.
+              ${{ secrets.MAIL_FROM }}

@@ -1,0 +1,41 @@
+name: deploy
+
+on:
+  push:
+    branches:
+      - 'release'
+  workflow_dispatch:
+
+#permissions:
+#  contents: write
+
+jobs:
+  exec_build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: release
+      - name: Run commands
+        run: |
+          echo ok
+          ls
+
+  exec_deploy:
+    needs: exec_build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: release
+      - name: SSH Access
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          port: ${{ secrets.PORT }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          script: |
+            cd git/REPOSITORY
+            git pull
+            sh deploy.sh
