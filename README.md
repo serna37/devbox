@@ -205,7 +205,7 @@ My dotfiles is [here](https://github.com/serna37/dotfiles).
 
 # Development
 
-## Dockergile
+## Dockerfile
 ```Dockerfile
 # using debian
 # debian使ってます
