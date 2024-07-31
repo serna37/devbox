@@ -1,8 +1,5 @@
 [![tag](https://img.shields.io/badge/tag-v0.0.1-green)](https://github.com/serna37/devbox/releases/tag/v0.0.1)
 
-[![build](https://github.com/serna37/devbox/actions/workflows/build.yml/badge.svg?branch=develop)](https://github.com/serna37/devbox/actions/workflows/build.yml)
-[![deploy](https://github.com/serna37/devbox/actions/workflows/deploy.yml/badge.svg?branch=release)](https://github.com/serna37/devbox/actions/workflows/deploy.yml)
-[![cron](https://github.com/serna37/devbox/actions/workflows/cron.yml/badge.svg?branch=release)](https://github.com/serna37/devbox/actions/workflows/cron.yml)
 [![tag_release](https://github.com/serna37/devbox/actions/workflows/tag_release.yml/badge.svg?branch=master)](https://github.com/serna37/devbox/actions/workflows/tag_release.yml)
 
 # devbox
