@@ -101,6 +101,8 @@ When you execute command `devbox` in devbox.sh, devbox do this flow.
 7. Start and login container with `zsh`.
 8. When you logout from container, destruct `shared-register`.
 
+My dotfiles is [here](https://github.com/serna37/dotfiles).
+
 ---
 
 # Usage
@@ -180,6 +182,8 @@ devbox.sh内の関数`devbox`を実行すると、以下の流れでコンテナ
 非同期プロセスで繋ぎます。このプロセスはコンテナを抜けた際に終了されます。
 7. コンテナを起動し、zshでログインします。
 8. コンテナをexitすると、`shared-register`やプロセスを消します。
+
+My dotfiles is [here](https://github.com/serna37/dotfiles).
 
 ---
 
