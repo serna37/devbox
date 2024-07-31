@@ -183,7 +183,7 @@ devbox.sh内の関数`devbox`を実行すると、以下の流れでコンテナ
 
 ---
 
-# Usage
+# 使い方など
 1. `devbox.sh`の内容をあなたの`.zshrc`にsourceするなりコピペするなりして、`exec $SHELL -l`なり`exec /bin/zsh -l`なりで適用します。
 2. 本レポジトリのうち、以下3つを`~/git/dotfiles/conf/devbox`にコピーしてください。
 パスが嫌であれば、devbox関数の中身の変数を変更できます。
@@ -200,3 +200,75 @@ devbox.sh内の関数`devbox`を実行すると、以下の流れでコンテナ
 
 # Development
 
+## Dockergile
+```Dockerfile
+# using debian
+# debian使ってます
+FROM debian:bullseye-slim
+
+# Enable multi-arch
+# マルチアーキ対応させます。x86系(amd64)のバイナリも実行できるようになります。
+# https://docs.orbstack.dev/machines/#multi-architecture
+RUN dpkg --add-architecture amd64 \
+    && apt update \
+    && apt upgrade -y \
+    && apt install -y libc6:amd64
+
+# install some.
+# お好きな物いれてください
+RUN apt install -y \
+    wget sudo time \
+    curl zsh git \
+    build-essential ca-certificates \
+    gzip file exiftool
+
+# vim 9をビルドします。debianでapt install vimは8.xしかなかったです
+# for vim9
+# https://uhoho.hatenablog.jp/entry/2023/05/09/033455
+RUN apt install -y build-essential autoconf automake cproto \
+    gettext libtinfo-dev libacl1-dev libgpm-dev \
+    libxmu-dev libgtk-3-dev libxpm-dev \
+    libperl-dev python3-dev ruby-dev \
+    libncurses-dev \
+    lua5.4 liblua5.4-dev \
+    libsodium-dev libcanberra-dev tcl-dev \
+    && git clone --depth 1 https://github.com/vim/vim.git \
+    && cd vim/src \
+    && ./configure --prefix=/root/.local --enable-multibyte --enable-cscope --enable-perlinterp --enable-python3interp --enable-rubyinterp --enable-luainterp --enable-fontset --enable-xim --enable-terminal --enable-fail-if-missing --with-x --enable-gui=gtk3 --enable-tclinterp \
+    && make && make install \
+    && ln -nfs /root/.local/bin/vim /usr/bin/vim
+
+# for shared-register (clipboard)
+# vimヤンクとホストのクリップボードを非同期で繋ずるために必要です
+RUN mkdir /shared-register
+
+# dotfiles
+# あなたのdotfilesを入れるinstall.shをcurlで呼び出します。
+
+# apt install kind.
+# debianなのでapt install系で作ってください。
+RUN /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/serna37/dotfiles/master/install.sh)"
+```
+
+## docker-compose.yml
+```docker-compose.yml
+services:
+  sandbox:
+    build: .
+    volumes:
+      # for shared-register
+      # クリップボード共有のため
+      - type: bind
+        source: ./shared-register
+        target: /shared-register
+      # for work
+      # 好きな作業用に。コンテナからここに入れたものが成果物みたいなイメージ
+      - type: bind
+        source: ./vol
+        target: /work
+    # to keep running container
+    # コンテナを起動させ続ける
+    # https://qiita.com/messhii222/items/01ae86ebedd576355fab
+    tty: true
+    stdin_open: true
+```
